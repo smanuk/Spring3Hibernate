@@ -1,4 +1,4 @@
-package net.form;
+package net.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -6,9 +6,11 @@ import javax.persistence.Id;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name="CONTACTS")
-public class Contact
+public class Contact implements Serializable
 {
 	@Id
 	@Column(name="ID")
@@ -67,5 +69,15 @@ public class Contact
 	public void setTelephone(String telehpone)
 	{
 		this.telephone = telehpone;
+	}
+	
+	public String toString()
+	{
+		StringBuffer buffer = new StringBuffer();
+		buffer.append("ID: " + id + ";");
+		buffer.append("Firstname: " + firstname + ";");
+		buffer.append("Lastname: " + lastname + "");
+		
+		return buffer.toString();
 	}
 }

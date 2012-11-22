@@ -2,7 +2,7 @@ package net.service;
 
 import java.util.List;
 
-import net.form.Contact;
+import net.domain.Contact;
 
 public interface ContactService
 {

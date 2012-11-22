@@ -2,13 +2,7 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<html>
-<head>
-    <title>Spring 3 MVC Series - Contact Manager</title>
-</head>
-<body>
 	<h2>Contact Manager</h2>
 	<form:form method="post" action="addContact" commandName="contact">
 	 
@@ -39,7 +33,7 @@
 
 	<h3>Contacts</h3>
 		<c:if  test="${!empty contactList}">
-	<table class="data">
+	<table class="table table-striped">
 	<tr>
 	    <th>Name</th>
 	    <th>Email</th>
@@ -57,6 +51,3 @@
 	</c:forEach>
 	</table>
 	</c:if>
-
-</body>
-</html>

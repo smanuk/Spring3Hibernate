@@ -2,7 +2,7 @@ package net.controller;
 
 import java.util.Map;
 
-import net.form.Contact;
+import net.domain.Contact;
 import net.service.ContactService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +20,11 @@ public class ContactController
 {
 	@Autowired
 	private ContactService contactService;
+	
+	public void setContactService(ContactService contactService)
+	{
+		this.contactService = contactService;
+	}
 	
 	@RequestMapping("/contacts")
 	public String listContacts(Map<String, Object> map)
@@ -42,4 +47,11 @@ public class ContactController
         contactService.removeContact(contactId);
         return "redirect:/contacts";
     }
+
+	public ContactService getContactService()
+	{
+		return contactService;
+	}
+
+
 }
