@@ -1,4 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
+
+
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -12,25 +16,26 @@
 
 </head>
 <body>
-	<div class="container-narrow">
-	
-		<tiles:insertAttribute name="menu" />
+	<div id="wrap">
+		<div class="container">
 		
-		<table border="1" cellpadding="2" cellspacing="2" align="center">
-		    <tr>
-		        <td height="30" colspan="2"><tiles:insertAttribute name="header" />
-		        </td>
-		    </tr>
-		    <tr>
-		        <td height="600"></td>
-		        <td width="600"><tiles:insertAttribute name="body" /></td>
-		    </tr>
-		    <tr>
-		        <td height="30" colspan="2"><tiles:insertAttribute name="footer" />
-		        </td>
-		    </tr>
-		</table>
-	</div>
+			
+			<tiles:insertAttribute name="menu" />
+	
+	      	<tiles:insertAttribute name="body" />
+	
+		
+			
+			
+		</div> <!-- container -->
+		<div id="push"></div>
+		
+	</div> <!-- wrap -->
+	
+	<tiles:insertAttribute name="footer" />
+	
+	
+	
 	
 	<!-- ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

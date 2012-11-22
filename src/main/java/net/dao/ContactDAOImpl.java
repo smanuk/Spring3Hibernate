@@ -2,7 +2,7 @@ package net.dao;
 
 import java.util.List;
 
-import net.form.Contact;
+import net.domain.Contact;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;

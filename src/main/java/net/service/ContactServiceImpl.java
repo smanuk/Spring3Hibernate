@@ -3,7 +3,7 @@ package net.service;
 import java.util.List;
 
 import net.dao.ContactDAO;
-import net.form.Contact;
+import net.domain.Contact;
 
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -11,7 +11,8 @@ public class HomeController
 	@RequestMapping({"/home", "/"})
 	public ModelAndView goHome()
 	{
-		String message = "Hello, welcome to Steak n Red!";
+		// hard coding messages is not really good working practice
+		String message = "Hello, welcome Spring 3 and Hibernate 4!";
 		return new ModelAndView("home", "message", message);
 	}
 }
