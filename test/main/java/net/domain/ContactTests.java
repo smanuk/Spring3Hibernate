@@ -2,14 +2,8 @@ package net.domain;
 
 import static org.junit.Assert.*;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-
 import org.junit.BeforeClass;
-import org.junit.AfterClass;
 import org.junit.Test;
-
-import org.junit.AfterClass;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;

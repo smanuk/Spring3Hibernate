@@ -12,5 +12,10 @@ import org.junit.runners.JUnit4;
 @RunWith(JUnit4.class)
 public class ContactControllerTests
 {
+	@Test
+	public void testBlah()
+	{
+		
+	}
 
 }
