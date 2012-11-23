@@ -12,6 +12,11 @@ import java.io.Serializable;
 @Table(name="CONTACTS")
 public class Contact implements Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2551115373271501001L;
+
 	@Id
 	@Column(name="ID")
 	@GeneratedValue

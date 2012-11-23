@@ -23,6 +23,8 @@ public class ContactDAOImpl implements ContactDAO
 	@Override
 	public List<Contact> listContact()
 	{
+		//return sessionFactory.getCurrentSession().createQuery("from Contact").list();
+		
 		return sessionFactory.getCurrentSession().createQuery("from Contact").list();
 	}
 
