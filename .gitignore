@@ -1,7 +1,5 @@
 .settings/
 bin/
-.project
-.classpath
 
 *.class
 jdbc.properties
