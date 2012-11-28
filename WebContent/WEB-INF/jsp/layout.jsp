@@ -16,11 +16,15 @@
 
 </head>
 <body>
-	<div id="wrap">
+	
+		<tiles:insertAttribute name="menu" />
+	
 		<div class="container">
 		
 			
-			<tiles:insertAttribute name="menu" />
+		
+			
+			
 	
 	      	<tiles:insertAttribute name="body" />
 	
@@ -28,9 +32,7 @@
 			
 			
 		</div> <!-- container -->
-		<div id="push"></div>
-		
-	</div> <!-- wrap -->
+
 	
 	<tiles:insertAttribute name="footer" />
 	

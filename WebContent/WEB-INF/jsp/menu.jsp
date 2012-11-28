@@ -1,3 +1,7 @@
+   <%@ taglib prefix="s" uri="http://www.springframework.org/tags" %>
+   
+    
+    
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -13,7 +17,24 @@
               <li><a href="contacts">Contact</a></li>
               <li><a href="#about">About</a></li>
             </ul>
+            
+            <s:url var="authURL" value="/static/j_spring_security_check" />
+            
+            <form method="post" class="navbar-form pull-right" action="${authURL}">
+              <input id="username_or_email" name="j_username" class="span2" type="text" placeholder="User name">
+              <input id="password" name="j_password" class="span2" type="password" placeholder="Password">
+              <!-- <small><a href="/account/resend_password">Forgot?</a></small> -->
+              <button type="submit" class="btn">Sign in</button>
+              
+            </form>
+            
+            
+            
           </div><!--/.nav-collapse -->
         </div>
       </div>
+      
+      <script type="text/javascript">
+      	document.getElementById("username_or_email").focus();
+      </script>
     </div>
