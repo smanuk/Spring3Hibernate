@@ -19,12 +19,14 @@
             </ul>
             
             <s:url var="authURL" value="/static/j_spring_security_check" />
+            <s:url var="logoutURL" value="/static/j_spring_security_logout" />
             
             <form method="post" class="navbar-form pull-right" action="${authURL}">
               <input id="username_or_email" name="j_username" class="span2" type="text" placeholder="User name">
               <input id="password" name="j_password" class="span2" type="password" placeholder="Password">
-              <!-- <small><a href="/account/resend_password">Forgot?</a></small> -->
               <button type="submit" class="btn">Sign in</button>
+              <!-- <small><a href="/account/resend_password">Forgot?</a></small> -->
+              <small><a href="/static/j_spring_security_logout">Logout!</a></small>
               
             </form>
             
