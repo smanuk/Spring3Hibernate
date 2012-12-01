@@ -4,7 +4,7 @@
 
 
 	<h2>Contact Manager</h2>
-	<form:form method="post" action="addContact" commandName="contact">
+	<form:form method="post" action="contact/add" commandName="contact">
 	 
 	    <table>
 		    <tr>
@@ -46,7 +46,7 @@
 	        <td>${contact.lastname}, ${contact.firstname} </td>
 	        <td>${contact.email}</td>
 	        <td>${contact.telephone}</td>
-	        <td><a href="deleteContact/${contact.id}">delete</a></td>
+	        <td><a href="contact/delete/${contact.id}">delete</a></td>
 	    </tr>
 	</c:forEach>
 	</table>

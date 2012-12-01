@@ -26,7 +26,7 @@ public class ContactController
 		this.contactService = contactService;
 	}
 	
-	@RequestMapping("/contacts")
+	@RequestMapping("contacts")
 	public String listContacts(Map<String, Object> map)
 	{
 		map.put("contact", new Contact());
@@ -34,14 +34,14 @@ public class ContactController
 		return "contacts";
 	}
 	
-    @RequestMapping(value = "/addContact", method = RequestMethod.POST)
+    @RequestMapping(value = "/contact/add", method = RequestMethod.POST)
     public String addContact(@ModelAttribute("contact") Contact contact, BindingResult result)
     {    	
         contactService.addContact(contact);
         return "redirect:/contacts";
     }
 	
-    @RequestMapping("/deleteContact/{contactId}")
+    @RequestMapping("contact/delete/{contactId}")
     public String deleteContact(@PathVariable("contactId") Integer contactId)
     {
         contactService.removeContact(contactId);

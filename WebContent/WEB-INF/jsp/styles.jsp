@@ -9,7 +9,7 @@
         
        .container {
         width: auto;
-        max-width: 1024px;
+        max-width: 1680px;
       }
       .container .credit {
         margin: 20px 0;

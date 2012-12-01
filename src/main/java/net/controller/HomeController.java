@@ -12,7 +12,13 @@ public class HomeController
 	public ModelAndView goHome()
 	{
 		// hard coding messages is not really good working practice
-		String message = "Hello, welcome Spring 3 and Hibernate 4!";
-		return new ModelAndView("home", "message", message);
+		// In principle these messages can be acquired using a service
+		// which connects to some content management systems
+		
+		
+		StringBuffer sb = new StringBuffer();
+		sb.append("Hello, welcome Spring 3 and Hibernate 4!");
+		
+		return new ModelAndView("home", "message", sb.toString());
 	}
 }
