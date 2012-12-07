@@ -2,12 +2,12 @@ package net.service;
 
 import java.util.List;
 
-import net.dao.ContactDAO;
-import net.domain.Contact;
-
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+
+import net.dao.ContactDAO;
+import net.domain.Contact;
 
 @Service
 public class ContactServiceImpl implements ContactService
@@ -23,9 +23,9 @@ public class ContactServiceImpl implements ContactService
 	}
 
 	@Override
-	@Transactional
+	@Transactional(readOnly=true)
 	public List<Contact> listContact()
-	{
+	{		
 		return contactDAO.listContact();
 	}
 

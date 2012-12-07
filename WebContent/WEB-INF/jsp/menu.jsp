@@ -19,6 +19,7 @@
               			<sec:authorize access="isAuthenticated() and hasRole('ROLE_MEMBER')">
               				<li><a href="contacts">Contact</a></li>
               			</sec:authorize>
+              			<li><a href="weather">Weather</a></li>
               			<li><a href="#about">About</a></li>
             		</ul>
             

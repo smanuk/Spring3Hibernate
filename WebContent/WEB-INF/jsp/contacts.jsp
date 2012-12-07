@@ -33,21 +33,21 @@
 
 	<h3>Contacts</h3>
 		<c:if  test="${!empty contactList}">
-	<table class="table table-striped">
-	<tr>
-	    <th>Name</th>
-	    <th>Email</th>
-	    <th>Telephone</th>
-	    <th>&nbsp;</th>
-	</tr>
-	
-	<c:forEach items="${contactList}" var="contact">
-	    <tr>
-	        <td>${contact.lastname}, ${contact.firstname} </td>
-	        <td>${contact.email}</td>
-	        <td>${contact.telephone}</td>
-	        <td><a href="contact/delete/${contact.id}">delete</a></td>
-	    </tr>
-	</c:forEach>
-	</table>
-	</c:if>
+			<table class="table table-striped">
+				<tr>
+				    <th>Name</th>
+				    <th>Email</th>
+				    <th>Telephone</th>
+				    <th>&nbsp;</th>
+				</tr>
+			
+				<c:forEach items="${contactList}" var="contact">
+				    <tr>
+				        <td>${contact.lastname}, ${contact.firstname} </td>
+				        <td>${contact.email}</td>
+				        <td>${contact.telephone}</td>
+				        <td><a href="contact/delete/${contact.id}">delete</a></td>
+				    </tr>
+				</c:forEach>
+			</table>
+		</c:if>

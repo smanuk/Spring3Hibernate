@@ -11,62 +11,62 @@ import org.junit.runners.JUnit4;
 @RunWith(JUnit4.class)
 public class ContactTests
 {
-	private static Contact contact;
-	
+	private static Contact CONTACT;
+		
 	@BeforeClass
 	public static void setupClass()
 	{
-		contact = new Contact();
+		CONTACT = new Contact();
 	}
 		
 	@Test
 	public void testSetAndGetID()
 	{
-		Integer testId = 23;
-		assertNull(contact.getId());
-		contact.setId(testId);
-		assertEquals(testId, contact.getId());
+		Long testId = 23L;
+		assertNull(CONTACT.getId());
+		CONTACT.setId(testId);
+		assertEquals(testId, CONTACT.getId());
 	}
 	
 	@Test
 	public void testSetAndGetFirstname()
 	{
 		String testFirstname = "John";
-		assertNull(contact.getFirstname());
-		contact.setFirstname(testFirstname);
-		assertEquals(testFirstname, contact.getFirstname());
+		assertNull(CONTACT.getFirstname());
+		CONTACT.setFirstname(testFirstname);
+		assertEquals(testFirstname, CONTACT.getFirstname());
 	}
 	
 	@Test
 	public void testSetAndGetLastName()
 	{
 		String testLastname = "Smith";
-		assertNull(contact.getLastname());
-		contact.setLastname(testLastname);
-		assertEquals(testLastname, contact.getLastname());
+		assertNull(CONTACT.getLastname());
+		CONTACT.setLastname(testLastname);
+		assertEquals(testLastname, CONTACT.getLastname());
 	}
 	
 	@Test
 	public void testSetAndGetEmail()
 	{
 		String testEmail = "test@email.com";
-		assertNull(contact.getEmail());
-		contact.setEmail(testEmail);
-		assertEquals(testEmail, contact.getEmail());
+		assertNull(CONTACT.getEmail());
+		CONTACT.setEmail(testEmail);
+		assertEquals(testEmail, CONTACT.getEmail());
 	}
 	
 	@Test
 	public void testSetAndGetTelephone()
 	{
 		String testTelephone = "02075544332";
-		assertNull(contact.getTelephone());
-		contact.setTelephone(testTelephone);
-		assertEquals(testTelephone, contact.getTelephone());
+		assertNull(CONTACT.getTelephone());
+		CONTACT.setTelephone(testTelephone);
+		assertEquals(testTelephone, CONTACT.getTelephone());
 	}
 	
 	@Test
 	public void testToString()
 	{
-		assertNotNull(contact.toString());
+		assertNotNull(CONTACT.toString());
 	}
 }

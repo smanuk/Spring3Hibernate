@@ -12,10 +12,12 @@ import java.io.Serializable;
 @Table(name="CONTACTS")
 public class Contact implements Serializable
 {
+	private static final long serialVersionUID = -2551115373271501001L;
+
 	@Id
 	@Column(name="ID")
 	@GeneratedValue
-	private Integer id;
+	private Long id;
 	
 	@Column(name="FIRSTNAME")
 	private String firstname;
@@ -29,11 +31,11 @@ public class Contact implements Serializable
 	@Column(name="TELEPHONE")
 	private String telephone;
 	
-	public Integer getId()
+	public Long getId()
 	{
 		return id;
 	}
-	public void setId(Integer id)
+	public void setId(Long id)
 	{
 		this.id = id;
 	}

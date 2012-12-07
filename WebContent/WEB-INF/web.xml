@@ -29,6 +29,7 @@
             classpath:service-context.xml
             classpath:dataSource-context.xml
             classpath:persistence-context.xml
+            classpath:restClient-context.xml
         </param-value>
     </context-param>
     

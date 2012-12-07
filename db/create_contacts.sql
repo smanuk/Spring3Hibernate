@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS `CONTACTS`;
 
 CREATE TABLE IF NOT EXISTS `CONTACTS` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` (11) NOT NULL AUTO_INCREMENT,
   `firstname` varchar(30) DEFAULT NULL,
   `lastname` varchar(30) DEFAULT NULL,
   `telephone` varchar(15) DEFAULT NULL,

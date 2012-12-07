@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Object Mapping DTD Version 1.0//EN"
+                         "http://castor.org/mapping.dtd">
+
+<mapping>
+    
+	<class name="net.domain.WeatherForecasts">
+	
+		<map-to xml="data"/>
+		
+		<field name="forecasts" type="net.domain.WeatherForecast" collection="arraylist">
+			<bind-xml name="weather"/>
+		</field>
+		
+		<field name="type" type="string">
+			<bind-xml name="type" location="request"/>
+		</field>
+		
+		<field name="query" type="string">
+			<bind-xml name="query" location="request"/>
+		</field>
+		
+		<field name="observation_time" type="string">
+			<bind-xml name="observation_time" location="current_condition"/>
+		</field>
+		
+		<field name="temp_C" type="string">
+			<bind-xml name="temp_C" location="current_condition"/>
+		</field>
+		
+		<field name="temp_F" type="string">
+			<bind-xml name="temp_F" location="current_condition"/>
+		</field>
+		
+		<field name="weatherCode" type="string">
+			<bind-xml name="weatherCode" location="current_condition"/>
+		</field>
+		
+				<field name="weatherIconUrl" type="string">
+			<bind-xml name="weatherIconUrl" location="current_condition"/>
+		</field>
+		
+				<field name="weatherDesc" type="string">
+			<bind-xml name="weatherDesc" location="current_condition"/>
+		</field>
+		
+				<field name="windspeedMiles" type="string">
+			<bind-xml name="windspeedMiles" location="current_condition"/>
+		</field>
+		
+				<field name="windspeedKmph" type="string">
+			<bind-xml name="windspeedKmph" location="current_condition"/>
+		</field>
+		
+		<field name="winddirDegree" type="string">
+			<bind-xml name="winddirDegree" location="current_condition"/>
+		</field>
+		
+		<field name="winddir16Point" type="string">
+			<bind-xml name="winddir16Point" location="current_condition"/>
+		</field>
+		
+		<field name="precipMM" type="string">
+			<bind-xml name="precipMM" location="current_condition"/>
+		</field>
+		
+		<field name="humidity" type="string">
+			<bind-xml name="humidity" location="current_condition"/>
+		</field>
+		
+		<field name="visibility" type="string">
+			<bind-xml name="visibility" location="current_condition"/>
+		</field>
+		
+		<field name="pressure" type="string">
+			<bind-xml name="pressure" location="current_condition"/>
+		</field>
+		
+		<field name="cloudcover" type="string">
+			<bind-xml name="cloudcover" location="current_condition"/>
+		</field>
+	</class>
+	
+	<class name="net.domain.WeatherForecast">
+	
+		<map-to xml="weather"/>
+		
+		<field name="weatherDate" type="string" handler="dateHandler">
+			<bind-xml name="date" node="element"/>								
+		</field>
+		
+		<field name="tempMaxC" type="integer">
+			<bind-xml name="tempMaxC" node="element"/>
+		</field>
+		
+		<field name="tempMaxF" type="integer">
+			<bind-xml name="tempMaxF" node="element"/>
+		</field>
+		
+		<field name="tempMinC" type="integer">
+			<bind-xml name="tempMinC" node="element"/>
+		</field>
+		
+		<field name="tempMinF" type="integer">
+			<bind-xml name="tempMinF" node="element"/>
+		</field>
+		
+		<field name="windspeedMiles" type="integer">
+			<bind-xml name="windspeedMiles" node="element"/>
+		</field>
+
+		<field name="windspeedKmph" type="integer">
+			<bind-xml name="windspeedKmph" node="element"/>
+		</field>
+		
+		<field name="windDirection" type="string">
+			<bind-xml name="winddirection" node="element"/>
+		</field>
+		
+		<field name="winddir16Point" type="string">
+			<bind-xml name="winddir16Point" node="element"/>
+		</field>
+		
+		<field name="windDirectionDegree" type="integer">
+			<bind-xml name="winddirDegree" node="element"/>
+		</field>
+		
+		<field name="weatherCode" type="string">
+			<bind-xml name="weatherCode" node="element"/>
+		</field>
+		
+		<field name="weatherIconURL" type="string">
+			<bind-xml name="weatherIconUrl" node="element"/>
+		</field>
+		
+		<field name="weatherDescription" type="string">
+			<bind-xml name="weatherDesc" node="element"/>
+		</field>
+	
+		<field name="precipitationMM" type="float">
+			<bind-xml name="precipMM" node="element"/>
+		</field>
+		
+	</class>
+	
+	<field-handler  name="dateHandler" class="xml.handler.DateTimeFieldHandler">		
+		<param name="date-format" value="yyyy-MM-dd"/>
+	</field-handler>
+</mapping>

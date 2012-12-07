@@ -1,5 +1,11 @@
-	<link href="resources/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<%@ taglib prefix="s" uri="http://www.springframework.org/tags" %>
 
+	<s:url var="styleMin" value="/resources/css/bootstrap.min.css" />
+	<s:url var="styleResp" value="resources/css/bootstrap-responsive.css" />
+	
+
+	<link href="${styleMin}" rel="stylesheet" media="screen">
+	
 
     <style type="text/css">
     	body {
@@ -17,7 +23,7 @@
 	  
      </style>
      
-    <link href="resources/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="${styleResp}" rel="stylesheet">
     
     <!-- Fav and touch icons -->
     <link rel="shortcut icon" href="/assets/ico/favicon.ico">
